@@ -1,91 +1,46 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import intro from '../../public/images/intro.png'
+import { AiFillLinkedin, AiFillMail, AiOutlineGithub } from 'react-icons/ai'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main>
+		<div className='my-10'>
+			<div className='w-[400px] h-[400px] m-auto nm-flat-neutral-900 rounded-xl mt-5 p-5'>
+				<img className='m-auto w-[200px]' src={intro.src} alt='My avatar'/>
+				<div className='text-neutral-200'>
+					<h1 className='text-center font-bold text-xl'>Daniel Chung</h1>
+					<p className='text-center'>Full stack developer, passionate about building stunning web applications to change the world.</p>
+				</div>
+				<div className='flex m-auto w-1/3 justify-between text-neutral-200 mt-5 text-xl'>
+					<Link href="https://www.linkedin.com/in/danielchungg/" target="_blank">
+						<AiFillLinkedin/>
+					</Link>
+					<Link href="https://github.com/pikachungg" target="_blank">
+						<AiOutlineGithub/>
+					</Link>
+					<a href="mailto:dec8768@rit.edu">
+						<AiFillMail/>
+					</a>
+				</div>
+			</div>
+			<div className='my-5'>
+				<div className='grid 2xl:grid-cols-3 xl:w-9/12 lg:w-10/12 m-auto grid-cols-1 lg:grid-cols-2 gap-y-5'>
+					<div className='w-[400px] m-auto nm-flat-neutral-900 rounded-xl mt-5 h-[400px] p-5 grid place-items-center'>
+						<h1 className='text-[800%] text-neutral-300'>SL2</h1>
+					</div>
+					<div className='w-[400px] m-auto nm-flat-neutral-900 rounded-xl mt-5 h-[400px] p-5 grid place-items-center'>
+						<h1 className='text-[800%] text-neutral-300'>ER</h1>
+					</div>
+					<div className='w-[400px] m-auto nm-flat-neutral-900 rounded-xl mt-5 h-[400px] p-5 grid place-items-center'>
+						<h1 className='text-[800%] text-neutral-300'>VAIN</h1>
+					</div>
+					<div className='w-[400px] m-auto nm-flat-neutral-900 rounded-xl mt-5 h-[400px] p-5 grid place-items-center'>
+						<h1 className='text-[800%] text-neutral-300'>C-19</h1>
+					</div>
+				</div>
+			</div>
+		</div>
     </main>
   )
 }
